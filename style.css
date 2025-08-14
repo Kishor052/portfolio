@@ -73,7 +73,11 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   padding: 80px 10%;
+=======
+  padding: 50px 10%;
+>>>>>>> 3d0fa01 (added a internship section)
   min-height: 100vh;
 }
 
@@ -153,6 +157,7 @@ body {
   z-index: -1;
 }
 
+<<<<<<< HEAD
 /* About Section */
 .about-section {
   padding: 60px 20px;
@@ -201,13 +206,51 @@ body {
 
 .interests {
   margin-top: 15px;
+=======
+/* ABOUT SECTION */
+.about-section {
+  background-color: #fefefe;
+  padding: 60px 20px;
+}
+
+.about-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.about-content:hover {
+  transform: scale(1.01);
+}
+
+.about-content h2 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: 20px;
+}
+
+.about-details p {
+  margin: 8px 0;
+}
+
+.interests {
+  margin-top: 20px;
+>>>>>>> 3d0fa01 (added a internship section)
 }
 
 .interests span {
   display: inline-block;
+<<<<<<< HEAD
   margin-right: 15px;
   background: #e0e0e0;
   padding: 6px 12px;
+=======
+  margin: 5px 10px;
+  background: #e0e0e0;
+  padding: 8px 14px;
+>>>>>>> 3d0fa01 (added a internship section)
   border-radius: 20px;
   font-size: 14px;
   color: #333;
@@ -268,6 +311,7 @@ body {
   color: #777;
 }
 
+<<<<<<< HEAD
 /* Projects Section */
 .projects-section {
   padding: 80px 20px;
@@ -291,10 +335,36 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+=======
+/* PROJECTS SECTION */
+.projects-section {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+>>>>>>> 3d0fa01 (added a internship section)
 }
 
 .project-card img {
   width: 100%;
+<<<<<<< HEAD
   height: 100%;
   object-fit: cover;
   transition: all 0.5s ease;
@@ -348,6 +418,58 @@ body {
   color: #fff;
 }
 
+=======
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-info h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.project-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.project-info a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  font-weight: 600;
+}
+/* INTERNSHIP SECTION */
+.internship-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.internship-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.internship-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.internship-card a {
+  color: #007bff;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+
+>>>>>>> 3d0fa01 (added a internship section)
 /* Contact Section */
 .contact-section {
   padding: 80px 20px;

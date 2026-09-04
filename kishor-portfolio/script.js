@@ -213,8 +213,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
   const nameInput = document.getElementById('contact-name');
   const emailInput = document.getElementById('contact-email');
+  const subjectInput = document.getElementById('contact-subject');
   const messageInput = document.getElementById('contact-message');
   const submitBtn = document.getElementById('form-submit-btn');
+  const responseMsg = document.getElementById('form-response-msg');
 
   function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -226,48 +228,86 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       let isValid = true;
 
+      if (responseMsg) {
+        responseMsg.style.display = 'none';
+        responseMsg.className = 'form-response-msg';
+      }
+
       // Validate Name
-      if (!nameInput.value.trim()) {
-        nameInput.closest('.form-group').classList.add('error');
+      if (!nameInput || !nameInput.value.trim()) {
+        if (nameInput) nameInput.closest('.form-group').classList.add('error');
         isValid = false;
       } else {
         nameInput.closest('.form-group').classList.remove('error');
       }
 
       // Validate Email
-      if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
-        emailInput.closest('.form-group').classList.add('error');
+      if (!emailInput || !emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
+        if (emailInput) emailInput.closest('.form-group').classList.add('error');
         isValid = false;
       } else {
         emailInput.closest('.form-group').classList.remove('error');
       }
 
       // Validate Message
-      if (!messageInput.value.trim()) {
-        messageInput.closest('.form-group').classList.add('error');
+      if (!messageInput || !messageInput.value.trim()) {
+        if (messageInput) messageInput.closest('.form-group').classList.add('error');
         isValid = false;
       } else {
         messageInput.closest('.form-group').classList.remove('error');
       }
 
       if (isValid) {
-        // Show loading state
         const originalBtnContent = submitBtn.innerHTML;
         submitBtn.disabled = true;
-        submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Sending...`;
+        submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Sending message...`;
 
-        setTimeout(() => {
+        const payload = {
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          _subject: subjectInput && subjectInput.value.trim() ? subjectInput.value.trim() : 'Portfolio Contact Inquiry',
+          message: messageInput.value.trim()
+        };
+
+        fetch('https://formsubmit.co/ajax/gowdakishor457@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalBtnContent;
-          showToast('Thank you! Your message has been prepared.', 'fa-paper-plane');
 
-          // Open mail client fallback safely
-          const subject = encodeURIComponent(document.getElementById('contact-subject').value || 'Portfolio Contact Inquiry');
-          const body = encodeURIComponent(`Name: ${nameInput.value}\nEmail: ${emailInput.value}\n\nMessage:\n${messageInput.value}`);
-          window.open(`mailto:gowdakishor457@gmail.com?subject=${subject}&body=${body}`, '_blank');
+          if (responseMsg) {
+            responseMsg.className = 'form-response-msg success';
+            responseMsg.innerHTML = `<i class="fas fa-check-circle" style="font-size: 18px;"></i> <span>Thank you! Your message has been sent directly to Kishor J.</span>`;
+            responseMsg.style.display = 'flex';
+          }
 
+          showToast('Thank you! Message sent successfully.', 'fa-paper-plane');
           contactForm.reset();
-        }, 1000);
+        })
+        .catch(err => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnContent;
+
+          // Direct mailto trigger fallback (without _blank popup block)
+          const subject = encodeURIComponent(payload._subject);
+          const body = encodeURIComponent(`Name: ${payload.name}\nEmail: ${payload.email}\n\nMessage:\n${payload.message}`);
+          window.location.href = `mailto:gowdakishor457@gmail.com?subject=${subject}&body=${body}`;
+
+          if (responseMsg) {
+            responseMsg.className = 'form-response-msg success';
+            responseMsg.innerHTML = `<i class="fas fa-envelope" style="font-size: 18px;"></i> <span>Opening your email client to send message...</span>`;
+            responseMsg.style.display = 'flex';
+          }
+
+          showToast('Opening email application...', 'fa-envelope');
+        });
       }
     });
 

@@ -1,364 +1,1066 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kishor | Portfolio</title>
+
+  <!-- Primary Meta Tags -->
+  <title>Kishor J | AI & Python Full Stack Developer Portfolio</title>
+  <meta name="title" content="Kishor J | AI & Python Full Stack Developer Portfolio">
+  <meta name="description"
+    content="Portfolio of Kishor J - AI & Python Full Stack Developer specializing in FastAPI, React.js, PostgreSQL, AI recommendation systems, semantic matching, and enterprise SaaS platforms.">
+  <meta name="keywords"
+    content="Kishor J, AI Full Stack Developer, Python Developer, FastAPI, React.js, PostgreSQL, Bengaluru Software Developer, Fusteps, Semantic Matching">
+  <meta name="author" content="Kishor J">
+  <meta name="theme-color" content="#a5a488">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kishorj.netlify.app/">
+  <meta property="og:title" content="Kishor J | AI & Python Full Stack Developer">
+  <meta property="og:description"
+    content="AI & Python Full Stack Developer building enterprise SaaS platforms, AI recommendation engines, and high-performance web applications.">
+  <meta property="og:image" content="main-sec-img.jpeg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23a5a488'/><text x='50' y='68' font-size='60' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%23ffffff'>K</text></svg>">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+  <!-- READINESS & SKIP LINK -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Kishor.DEV</div>
+  <header class="header">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="#" class="logo" aria-label="Kishor J Developer Home">
+        <span class="logo-text">Kishor J</span><span class="logo-dot">.DEV</span>
+      </a>
 
-    <input type="checkbox" id="menu-toggle" hidden>
-    <label for="menu-toggle" class="menu-icon">
-      <i class="fas fa-bars"></i>
-    </label>
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#internship" class="nav-link">Experience</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
 
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#internship">Internship</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+      <div class="nav-actions">
+        <!-- Theme Toggle Switch -->
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark and light mode" title="Toggle Theme">
+          <i class="fas fa-moon moon-icon"></i>
+          <i class="fas fa-sun sun-icon"></i>
+        </button>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-left">
-      <h1>
-        Hi, I am <span>Kishor</span><br>
-        Full Stack Developer | AI Enthusiast
-      </h1>
-
-      <div class="buttons">
-        <a href="#contact" class="btn primary">Hire Me</a>
-        <a href="https://drive.google.com/file/d/1mER_NrvxmTrePKPZrhePBaPxMw8Q5nI4/view?usp=drive_link" class="btn outline" download>View CV</a>
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </div>
-    </div>
+    </nav>
+  </header>
 
-    <div class="hero-right">
-      <img src="main-sec-img.jpeg" alt="Kishor">
-    </div>
-  </section>
+  <!-- MAIN CONTENT WRAPPER -->
+  <main id="main-content">
 
- <!-- ABOUT -->
-<section id="about" class="about-section">
-  <div class="container">
-    <h2>About Me</h2>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="availability-badge">
+            <span class="status-dot"></span> Available for Full-Time Roles & AI Projects
+          </div>
 
-    <p class="about-text">
-      I am Kishor, a Computer Science Engineering student at Sri Krishna Institute of Technology,
-      passionate about building modern web applications and intelligent software solutions.
-      I enjoy solving real-world problems through clean design, efficient code, and practical development.
-    </p>
+          <h1 class="hero-title">
+            Hi, I am <span class="highlight">Kishor J</span>
+          </h1>
 
-    <p class="about-text">
-      My core interests include Full Stack Development, Frontend Development, AI-based applications,
-      and problem solving. I have worked with technologies like HTML, CSS, JavaScript, React,
-      Tailwind CSS, Bootstrap, Python, Java, Node.js, MySQL, MongoDB, GitHub, VS Code, and Moqups.
-    </p>
+          <h2 class="hero-subtitle">
+            <span id="typewriter"></span><span class="type-cursor">|</span>
+          </h2>
 
-    <div class="about-details">
-      <p><strong>Name:</strong> Kishor</p>
-      <p><strong>Date of birth:</strong> MAY 15, 2005</p>
-      <p><strong>Address:</strong> Kalathammanahalli, Bengaluru, India</p>
-      <p><strong>Zip code:</strong> 560089</p>
-      <p><strong>Email:</strong> gowdakishor457@gmail.com</p>
-      <p><strong>Phone:</strong> +91-9742482379</p>
-    </div>
+          <p class="hero-description">
+            AI & Python Full Stack Developer with experience in enterprise SaaS applications, AI-powered web platforms,
+            React.js, FastAPI, REST APIs, requirement analysis, AI recommendation systems, semantic resume matching, and
+            Agile software development.
+          </p>
 
-    <div class="interests">
-      <span><i class="fas fa-music"></i> Music</span>
-      <span><i class="fas fa-plane"></i> Travel</span>
-      <span><i class="fas fa-film"></i> Movie</span>
-      <span><i class="fas fa-futbol"></i> Sports</span>
-    </div>
-  </div>
-</section>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <span>Hire Me</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="Kishor_J_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-file-pdf"></i>
+              <span>View Resume</span>
+            </a>
+            <button class="btn btn-icon" id="hero-copy-email" title="Copy Email to Clipboard" aria-label="Copy Email">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
 
-  <!-- SKILLS -->
-  <section id="skills" class="skills-section">
-    <h2>My Skills</h2>
+          <!-- Quick Social Links -->
+          <div class="hero-socials">
+            <span class="social-label">Connect:</span>
+            <a href="https://github.com/Kishor052" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"
+              class="social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kishorj052" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn Profile" class="social-link" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:gowdakishor457@gmail.com" class="social-link" aria-label="Email" title="Email Me">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+919742482379" class="social-link" aria-label="Phone" title="Call Me">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+        </div>
 
-    <div class="skills-grid">
-      <div class="skill-card">
-        <img src="html.png" class="skill-icon" alt="HTML">
-        <h4>HTML</h4>
-      </div>
+        <!-- Hero Avatar Right -->
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <div class="avatar-ring ring-1"></div>
+            <div class="avatar-ring ring-2"></div>
+            <div class="avatar-card">
+              <img src="main-sec-img.jpeg" alt="Kishor J - AI & Python Full Stack Developer" class="hero-img">
+            </div>
 
-      <div class="skill-card">
-        <img src="css.png" class="skill-icon" alt="CSS">
-        <h4>CSS</h4>
-      </div>
-
-      <div class="skill-card">
-        <img src="javascript.png" class="skill-icon" alt="JavaScript">
-        <h4>JavaScript</h4>
-      </div>
-
-      <div class="skill-card">
-        <img src="react.png" class="skill-icon" alt="React">
-        <h4>React</h4>
-      </div>
-
-      <div class="skill-card">
-        <img src="">
-        <h4>Tailwind CSS</h4>
-      </div>
-
-      <div class="skill-card">
-        <img src="bootstrap.png" class="skill-icon" alt="Bootstrap">
-        <h4>Bootstrap</h4>
-      </div>
-
-      <div class="skill-card">
-        <img src="python.png" class="skill-icon" alt="Python">
-        <h4>Python</h4>
-      </div>
-
-      <div class="skill-card">
-        <img src="java.png" class="skill-icon" alt="Java">
-        <h4>Java</h4>
-      </div>
-
-      <div class="skill-card">
-        <img src="nodejs.png" class="skill-icon" alt="NodeJS">
-        <h4>NodeJS</h4>
+            <!-- Floating Tech Badges -->
+            <div class="tech-badge badge-1">
+              <i class="fab fa-python" style="color: #3776ab;"></i>
+              <span>Python / FastAPI</span>
+            </div>
+            <div class="tech-badge badge-2">
+              <i class="fab fa-react" style="color: #61dafb;"></i>
+              <span>React.js</span>
+            </div>
+            <div class="tech-badge badge-3">
+              <i class="fas fa-brain" style="color: #a5a488;"></i>
+              <span>AI Matching</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="skill-card">
-        <img src="mysql.png" class="skill-icon" alt="MySQL">
-        <h4>MySQL</h4>
+      <!-- Quick Metrics Bar -->
+      <div class="stats-bar">
+        <div class="container stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">Enterprise SaaS</span>
+            <span class="stat-label">Alstonair Technologies</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">FastAPI + React</span>
+            <span class="stat-label">Core Tech Stack</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">7.4 CGPA</span>
+            <span class="stat-label">B.E. Computer Science</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">AI & NLP</span>
+            <span class="stat-label">Semantic Recommendation</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="skill-card">
-        <img src="mongodb.png" class="skill-icon" alt="MongoDB">
-        <h4>MongoDB</h4>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Professional Background</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Story Column -->
+          <div class="about-story-card">
+            <div class="card-icon-badge">
+              <i class="fas fa-user-gear"></i>
+            </div>
+            <h3>AI & Python Full Stack Developer</h3>
+            <p>
+              I am <strong>Kishor J</strong>, an AI & Python Full Stack Developer with experience in enterprise SaaS
+              applications,
+              AI-powered web platforms, React.js, FastAPI, REST APIs, requirement analysis, AI recommendation systems,
+              semantic resume matching, and Agile software development. I am passionate about building AI-enabled
+              products that solve real-world recruitment and career guidance challenges.
+            </p>
+            <p>
+              I hold a <strong>Bachelor of Engineering in Computer Science & Engineering</strong> (CGPA: 7.4) from
+              <span class="accent-bold">Sri Krishna Institute of Technology</span>, Bengaluru (2022–2026). Currently
+              working as a
+              <strong>Software Developer Trainee</strong> at <em>Alstonair Technologies Pvt. Ltd.</em> on
+              <strong>Fusteps</strong>—an AI-native college-to-corporate platform.
+            </p>
+
+            <!-- Key Domains -->
+            <div class="interests-container">
+              <h4 class="interests-title"><i class="fas fa-layer-group"></i> Core Specializations</h4>
+              <div class="interests-tags">
+                <span class="interest-pill"><i class="fas fa-robot"></i> AI Recommendation Engines</span>
+                <span class="interest-pill"><i class="fas fa-project-diagram"></i> Enterprise SaaS Platforms</span>
+                <span class="interest-pill"><i class="fas fa-code-branch"></i> Semantic NLP Resume Matching</span>
+                <span class="interest-pill"><i class="fas fa-bolt"></i> FastAPI REST Microservices</span>
+                <span class="interest-pill"><i class="fab fa-react"></i> React.js Dashboards</span>
+                <span class="interest-pill"><i class="fas fa-tasks"></i> Agile Scrum & Jira</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Info Card -->
+          <div class="about-info-card">
+            <h3 class="info-card-title">Personal Summary</h3>
+            <ul class="info-list">
+              <li class="info-item">
+                <div class="info-icon"><i class="fas fa-user"></i></div>
+                <div class="info-content">
+                  <span class="info-label">Full Name</span>
+                  <span class="info-value">Kishor J</span>
+                </div>
+              </li>
+              <li class="info-item">
+                <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="info-content">
+                  <span class="info-label">Degree & CGPA</span>
+                  <span class="info-value">B.E. Computer Science (CGPA: 7.4 / 10)</span>
+                </div>
+              </li>
+              <li class="info-item">
+                <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="info-content">
+                  <span class="info-label">Current Experience</span>
+                  <span class="info-value">Software Developer Trainee @ Alstonair</span>
+                </div>
+              </li>
+              <li class="info-item">
+                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-content">
+                  <span class="info-label">Location</span>
+                  <span class="info-value">Bengaluru, Karnataka, India</span>
+                </div>
+              </li>
+              <li class="info-item">
+                <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                <div class="info-content">
+                  <span class="info-label">Email</span>
+                  <a href="mailto:gowdakishor457@gmail.com" class="info-value link-accent">gowdakishor457@gmail.com</a>
+                </div>
+              </li>
+              <li class="info-item">
+                <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="info-content">
+                  <span class="info-label">Phone</span>
+                  <a href="tel:+919742482379" class="info-value link-accent">+91-9742482379</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="skill-card">
-        <img src="github.png" class="skill-icon" alt="GitHub">
-        <h4>GitHub</h4>
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">My Skills</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <!-- Skills Filter Controls -->
+        <div class="skills-filter-wrapper">
+          <div class="skills-tabs" role="tablist">
+            <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">All Skills</button>
+            <button class="tab-btn" data-filter="languages" role="tab">Languages</button>
+            <button class="tab-btn" data-filter="frontend" role="tab">Frontend</button>
+            <button class="tab-btn" data-filter="backend" role="tab">Backend & DB</button>
+            <button class="tab-btn" data-filter="tools" role="tab">Tools & Methods</button>
+          </div>
+
+          <div class="skills-search">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="skill-search-input" placeholder="Search skills (e.g. Python, FastAPI, React)..."
+              aria-label="Search skills">
+          </div>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-grid">
+
+          <!-- Python -->
+          <div class="skill-card" data-category="languages backend" data-name="python">
+            <div class="skill-icon-box">
+              <img src="python.png" alt="Python Icon" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Python</h4>
+            <span class="skill-badge">Core Language</span>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card" data-category="languages frontend" data-name="javascript">
+            <div class="skill-icon-box">
+              <img src="javascript.png" alt="JavaScript Icon" class="skill-icon">
+            </div>
+            <h4 class="skill-name">JavaScript</h4>
+            <span class="skill-badge">ES6+</span>
+          </div>
+
+          <!-- FastAPI -->
+          <div class="skill-card" data-category="backend" data-name="fastapi">
+            <div class="skill-icon-box svg-box">
+              <svg viewBox="0 0 24 24" class="skill-svg-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 12h8v10l10-10h-8V2z" fill="#059669" />
+              </svg>
+            </div>
+            <h4 class="skill-name">FastAPI</h4>
+            <span class="skill-badge">REST Microservices</span>
+          </div>
+
+          <!-- Django -->
+          <div class="skill-card" data-category="backend" data-name="django">
+            <div class="skill-icon-box svg-box">
+              <svg viewBox="0 0 24 24" class="skill-svg-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.127 0h3.816v18.068c-1.892.42-3.418.57-4.832.57-3.955 0-6.108-1.782-6.108-5.012 0-3.328 2.29-5.184 5.922-5.184.453 0 .762.015 1.202.06V0zm-.005 11.233c-.287-.045-.588-.06-.9-.06-1.79 0-2.82.78-2.82 2.37 0 1.487.973 2.25 2.64 2.25.333 0 .742-.03 1.08-.09V11.233z"
+                  fill="#092E20" />
+              </svg>
+            </div>
+            <h4 class="skill-name">Django</h4>
+            <span class="skill-badge">Python Framework</span>
+          </div>
+
+          <!-- REST APIs -->
+          <div class="skill-card" data-category="backend" data-name="rest apis">
+            <div class="skill-icon-box svg-box">
+              <svg viewBox="0 0 24 24" class="skill-svg-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" fill="#a5a488" />
+              </svg>
+            </div>
+            <h4 class="skill-name">REST APIs</h4>
+            <span class="skill-badge">API Architecture</span>
+          </div>
+
+          <!-- React.js -->
+          <div class="skill-card" data-category="frontend" data-name="react">
+            <div class="skill-icon-box">
+              <img src="react.png" alt="React Icon" class="skill-icon">
+            </div>
+            <h4 class="skill-name">React.js</h4>
+            <span class="skill-badge">Frontend Library</span>
+          </div>
+
+          <!-- Tailwind CSS -->
+          <div class="skill-card" data-category="frontend" data-name="tailwind css">
+            <div class="skill-icon-box svg-box">
+              <svg viewBox="0 0 24 24" class="skill-svg-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.336 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19.2 12.001 19.2c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z"
+                  fill="#06B6D4" />
+              </svg>
+            </div>
+            <h4 class="skill-name">Tailwind CSS</h4>
+            <span class="skill-badge">Styling</span>
+          </div>
+
+          <!-- Bootstrap -->
+          <div class="skill-card" data-category="frontend" data-name="bootstrap">
+            <div class="skill-icon-box">
+              <img src="bootstrap.png" alt="Bootstrap Icon" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Bootstrap</h4>
+            <span class="skill-badge">UI Components</span>
+          </div>
+
+          <!-- HTML5 -->
+          <div class="skill-card" data-category="frontend" data-name="html">
+            <div class="skill-icon-box">
+              <img src="html.png" alt="HTML Icon" class="skill-icon">
+            </div>
+            <h4 class="skill-name">HTML5</h4>
+            <span class="skill-badge">Markup</span>
+          </div>
+
+          <!-- CSS3 -->
+          <div class="skill-card" data-category="frontend" data-name="css">
+            <div class="skill-icon-box">
+              <img src="css.png" alt="CSS Icon" class="skill-icon">
+            </div>
+            <h4 class="skill-name">CSS3</h4>
+            <span class="skill-badge">Styling</span>
+          </div>
+
+          <!-- PostgreSQL -->
+          <div class="skill-card" data-category="backend" data-name="postgresql">
+            <div class="skill-icon-box svg-box">
+              <svg viewBox="0 0 24 24" class="skill-svg-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                  fill="#336791" />
+              </svg>
+            </div>
+            <h4 class="skill-name">PostgreSQL</h4>
+            <span class="skill-badge">Relational DB</span>
+          </div>
+
+          <!-- MySQL -->
+          <div class="skill-card" data-category="backend" data-name="mysql">
+            <div class="skill-icon-box">
+              <img src="mysql.png" alt="MySQL Icon" class="skill-icon">
+            </div>
+            <h4 class="skill-name">MySQL</h4>
+            <span class="skill-badge">Relational DB</span>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card" data-category="tools" data-name="git github">
+            <div class="skill-icon-box">
+              <img src="github.png" alt="GitHub Icon" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Git & GitHub</h4>
+            <span class="skill-badge">Version Control</span>
+          </div>
+
+          <!-- Jira -->
+          <div class="skill-card" data-category="tools" data-name="jira agile">
+            <div class="skill-icon-box svg-box">
+              <svg viewBox="0 0 24 24" class="skill-svg-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.53 2c0 2.4 1.97 4.35 4.38 4.35h3.74v3.71c0 2.4 1.97 4.35 4.35 4.35V2h-12.47zm-4.38 4.35c0 2.4 1.97 4.35 4.38 4.35h3.74v3.71c0 2.4 1.97 4.35 4.35 4.35V6.35H7.15zm-4.35 4.35c0 2.4 1.97 4.35 4.35 4.35h3.74v3.71c0 2.4 1.97 4.35 4.35 4.35V10.7H2.8z"
+                  fill="#0052CC" />
+              </svg>
+            </div>
+            <h4 class="skill-name">Jira & Agile</h4>
+            <span class="skill-badge">Scrum / Sprint</span>
+          </div>
+
+          <!-- VS Code -->
+          <div class="skill-card" data-category="tools" data-name="vs code">
+            <div class="skill-icon-box">
+              <img src="vscode.png" alt="VS Code Icon" class="skill-icon">
+            </div>
+            <h4 class="skill-name">VS Code</h4>
+            <span class="skill-badge">IDE</span>
+          </div>
+
+        </div>
       </div>
+    </section>
 
-      <div class="skill-card">
-        <img src="vscode.png" class="skill-icon" alt="VS Code">
-        <h4>VS Code</h4>
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Academic & Enterprise Projects</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Deployed Project: DocBot AI Chatbot -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-type-badge deployed-badge"><i class="fas fa-rocket"></i> Deployed Live | AI &amp; RAG
+                Platform</div>
+              <h3 class="project-title">DocBot – AI RAG-Based Document Chatbot</h3>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">
+                A high-performance, cloud-deployed AI document chatbot engineered with FastAPI, React, LangChain,
+                ChromaDB, and OpenAI for interactive document retrieval and Q&amp;A.
+              </p>
+              <ul class="project-features">
+                <li><i class="fas fa-check-circle"></i> Architected an asynchronous ingestion pipeline with
+                  <strong>LangChain &amp; ChromaDB</strong> vector store handling 10,000+ documents.
+                </li>
+                <li><i class="fas fa-check-circle"></i> Integrated <strong>FastAPI backend microservices</strong> with
+                  <strong>OpenAI LLM</strong> for context-aware, accurate document Q&amp;A.
+                </li>
+                <li><i class="fas fa-check-circle"></i> Deployed live production web application hosted on
+                  <strong>Vercel</strong> with real-time query processing.
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">ChromaDB</span>
+                <span class="tag">OpenAI API</span>
+                <span class="tag">Vercel</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://docbot-ai-chatbot.vercel.app/" class="project-link-btn live-btn" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i>
+                <span>View Live Application</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2: Automated Resume Screening & Ranking Using AI -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-type-badge">Academic Project | AI Recruitment</div>
+              <h3 class="project-title">Automated Resume Screening & Ranking Using AI</h3>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">
+                An AI-powered recruitment platform built with React.js, FastAPI, and PostgreSQL for automated resume
+                screening, candidate ranking, and AI mentorship.
+              </p>
+              <ul class="project-features">
+                <li><i class="fas fa-check-circle"></i> Developed an AI-powered recruitment platform for automated
+                  resume screening and candidate ranking.</li>
+                <li><i class="fas fa-check-circle"></i> Implemented NLP-based resume parsing and job matching using
+                  <strong>TF-IDF &amp; Cosine Similarity</strong>.
+                </li>
+                <li><i class="fas fa-check-circle"></i> Built an <strong>AI Mentor module</strong> to compare resumes
+                  with job descriptions, identify skill gaps, and recommend courses, projects, and resume improvements.
+                </li>
+                <li><i class="fas fa-check-circle"></i> Developed recruiter dashboards with AI-generated candidate
+                  rankings.</li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">NLP</span>
+                <span class="tag">TF-IDF</span>
+                <span class="tag">Cosine Similarity</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Kishor052/AUTOMATED-RESUME-SCREENING-AND-RANKING-USING-AI-.git"
+                class="project-link-btn" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+                <span>View Source Code</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3: AI Job Scam Detector -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-type-badge">Academic Project | NLP & ML</div>
+              <h3 class="project-title">AI Job Scam Detector</h3>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">
+                An AI-powered application engineered with Python, NLP, and Machine Learning to identify fraudulent job
+                postings and verify hiring offers.
+              </p>
+              <ul class="project-features">
+                <li><i class="fas fa-check-circle"></i> Developed an AI-powered application to identify fraudulent job
+                  postings using Natural Language Processing.</li>
+                <li><i class="fas fa-check-circle"></i> Applied <strong>TF-IDF</strong>, semantic analysis, and feature
+                  extraction to classify genuine and fraudulent jobs.</li>
+                <li><i class="fas fa-check-circle"></i> Generated AI-based risk scores with explainable insights for job
+                  verification.</li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">TF-IDF</span>
+                <span class="tag">Semantic Analysis</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Kishor052/JobScamDetector.git" class="project-link-btn" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+                <span>View Source Code</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 4: Fusteps – AI College-to-Corporate Platform -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-type-badge">Enterprise SaaS Platform</div>
+              <h3 class="project-title">Fusteps – AI College-to-Corporate Platform</h3>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">
+                An AI-native SaaS platform built at Alstonair Technologies supporting student learning, recruiter
+                hiring, and institutional analytics.
+              </p>
+              <ul class="project-features">
+                <li><i class="fas fa-check-circle"></i> Integrated EduYata and TopSca modules to deliver
+                  assessment-driven, AI-based course recommendations based on skill gaps.</li>
+                <li><i class="fas fa-check-circle"></i> Contributed to the Recruiter ROI Insights module defining KPI
+                  dashboards for candidate sourcing efficiency.</li>
+                <li><i class="fas fa-check-circle"></i> Implemented R&amp;D semantic matching pipelines for skill gap
+                  analysis and personalized learning paths.</li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Enterprise SaaS</span>
+                <span class="tag">AI Agents</span>
+                <span class="tag">Agile Development</span>
+                <span class="tag">Cloud</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <span class="project-confidential-btn">
+                <i class="fas fa-lock"></i> Confidential Enterprise SaaS Codebase
+              </span>
+            </div>
+          </article>
+
+          <!-- Project 5: Kissan Vaahan – Digital Marketplace -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-type-badge">Digital Marketplace</div>
+              <h3 class="project-title">Kissan Vaahan – Agricultural E-Commerce</h3>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">
+                A digital marketplace developed at Gully Sales connecting local farmers, produce vendors, and vehicle
+                logistics providers.
+              </p>
+              <ul class="project-features">
+                <li><i class="fas fa-check-circle"></i> Developed responsive frontend interfaces with React.js, Tailwind
+                  CSS, and Bootstrap.</li>
+                <li><i class="fas fa-check-circle"></i> Developed FastAPI REST APIs for authentication, product
+                  catalogs, and order management with PostgreSQL.</li>
+                <li><i class="fas fa-check-circle"></i> Executed performance optimization, debugging, and end-to-end
+                  integration across services.</li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Bootstrap</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Kishor052/Kissan-Vaahan.git" class="project-link-btn" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+                <span>View Source Code</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <div class="skill-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6VXAS-4rts8t1iPGGOTeCq8tpmvsYoI56f09whXtRIA&s" class="skill-icon" alt="Moqups">
-        <h4>Moqups</h4>
+    <!-- EXPERIENCE SECTION -->
+    <section id="internship" class="section internship-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Professional Experience</span>
+          <h2 class="section-title">Industry History</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="timeline">
+
+          <!-- Experience Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <span class="company-badge">Alstonair Technologies Pvt. Ltd., Bengaluru</span>
+                  <h3 class="role-title">Software Developer Trainee</h3>
+                  <span class="project-subtitle-text"><i class="fas fa-rocket"></i> Project: Fusteps – AI-Powered
+                    College-to-Corporate Platform</span>
+                </div>
+                <span class="duration-chip"><i class="far fa-calendar-alt"></i> May 2026 – Present</span>
+              </div>
+              <ul class="experience-points">
+                <li>Participated in requirement gathering, workflow analysis, and feature planning for enterprise SaaS
+                  applications.</li>
+                <li>Worked on the AI-native Fusteps platform supporting student, recruiter, and institutional workflows.
+                </li>
+                <li>Integrated <strong>EduYata</strong> to provide AI-powered course recommendations based on identified
+                  skill gaps.</li>
+                <li>Assisted in integrating <strong>TopSca</strong> to support assessment-driven learning
+                  recommendations.</li>
+                <li>Contributed to the <strong>Recruiter ROI Insights</strong> module by defining recruiter KPIs,
+                  analytics, and dashboard workflows to improve hiring insights.</li>
+                <li>Implemented AI recommendation workflows for skill-gap analysis and personalized learning paths.</li>
+                <li>Collaborated in Agile Scrum using <strong>Jira</strong> and <strong>Git</strong>.</li>
+                <li>Contributed to product R&amp;D on AI recommendation systems and semantic matching.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <span class="company-badge">Gully System Pvt. Ltd., Bengaluru</span>
+                  <h3 class="role-title">Web Design & Full Stack Development Intern</h3>
+                  <span class="project-subtitle-text"><i class="fas fa-shopping-cart"></i> Project: Kissan Vaahan –
+                    Digital Marketplace</span>
+                </div>
+                <span class="duration-chip"><i class="far fa-calendar-alt"></i> Aug 2025 – Dec 2025</span>
+              </div>
+              <ul class="experience-points">
+                <li>Contributed to end-to-end development of the Kissan Vaahan marketplace for farmers, vendors, and
+                  customers.</li>
+                <li>Developed responsive interfaces using React.js, HTML5, CSS3, Tailwind CSS, and Bootstrap.</li>
+                <li>Assisted in developing <strong>FastAPI REST APIs</strong> for authentication, product management,
+                  and order processing.</li>
+                <li>Integrated frontend with backend services and worked with <strong>PostgreSQL</strong> for data
+                  management.</li>
+                <li>Participated in testing, debugging, feature enhancements, and performance optimization.</li>
+                <li>Collaborated with designers and developers to deliver scalable application features.</li>
+              </ul>
+              <div class="timeline-actions">
+                <a href="https://drive.google.com/file/d/1F_lKx9Teud-AGRQ9MZ-iL42SvW6DrBG9/view?usp=drive_link"
+                  class="cert-pill-btn" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-certificate"></i> View Certificate
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="projects-section">
-    <h2 class="section-title">My Projects</h2>
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications" class="section certifications-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Verified Credentials</span>
+          <h2 class="section-title">Certifications</h2>
+          <div class="title-underline"></div>
+        </div>
 
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Automated Resume Screening & Ranking</h3>
-        <p class="project-tech">Full Stack Development | 2024</p>
-        <ul class="project-points">
-          <li>Built a web application that helps HR teams upload and review resumes.</li>
-          <li>Integrated Python NLP to extract key details such as skills and experience from resumes.</li>
-          <li>Implemented ranking system to match candidates with job descriptions.</li>
-          <li>Added filter based search to improve recruitment efficiency.</li>
-        </ul>
-        <a href="https://github.com/Kishor052/Automated-Resume-Screening-Ranking-.git" target="_blank">View Project</a>
+        <div class="certifications-grid">
+
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">Data Structures and Algorithms with Java</h3>
+              <p class="cert-issuer"><i class="fas fa-building"></i> Infosys Springboard</p>
+              <p class="cert-meta">Certification Program</p>
+            </div>
+            <a href="https://drive.google.com/file/d/1qQsE0tT-ATafqozjPKhjENjcm_OAiHnH/view?usp=drive_link"
+              class="cert-btn" target="_blank" rel="noopener noreferrer">
+              <span>View Certificate</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">Big Data Computing</h3>
+              <p class="cert-issuer"><i class="fas fa-building"></i> NPTEL</p>
+              <p class="cert-meta">Academic Course Certification</p>
+            </div>
+            <a href="https://drive.google.com/file/d/1CrBko4MPfn9fiJZCJoBwJCtrnfwBwV01/view?usp=drive_link"
+              class="cert-btn" target="_blank" rel="noopener noreferrer">
+              <span>View Certificate</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">Machine Learning for Beginners</h3>
+              <p class="cert-issuer"><i class="fas fa-building"></i> Simplilearn</p>
+              <p class="cert-meta">ML Fundamentals Specialization</p>
+            </div>
+            <span class="cert-btn disabled-cert">
+              <span>Verified Certificate</span>
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">Ethical CyberSecurity</h3>
+              <p class="cert-issuer"><i class="fas fa-building"></i> EthicalByte</p>
+              <p class="cert-meta">Cyber Security Specialization</p>
+            </div>
+            <a href="https://drive.google.com/file/d/13Swm_wvMcTq8-OY_-I-EECyPxUBeN-Wk/view?usp=drive_link"
+              class="cert-btn" target="_blank" rel="noopener noreferrer">
+              <span>View Certificate</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">MongoDB for Java Developers</h3>
+              <p class="cert-issuer"><i class="fas fa-building"></i> MongoDB University</p>
+              <p class="cert-meta">Professional Database Certification</p>
+            </div>
+            <a href="https://drive.google.com/file/d/11abo-FtJVRB-Uc6IWwVac1pR7GXZy-l0/view?usp=drive_link"
+              class="cert-btn" target="_blank" rel="noopener noreferrer">
+              <span>View Certificate</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <i class="fas fa-file-excel"></i>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">Excel Beginners to Advanced</h3>
+              <p class="cert-issuer"><i class="fas fa-building"></i> Younity</p>
+              <p class="cert-meta">Data Analytics Certification</p>
+            </div>
+            <a href="https://drive.google.com/file/d/1o2Zw7CQKZRJ3WunzKOpxVYqMoohXBDd4/view?usp=drive_link"
+              class="cert-btn" target="_blank" rel="noopener noreferrer">
+              <span>View Certificate</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+        </div>
       </div>
+    </section>
 
-      <div class="project-card">
-  <h3>AI Job Scam Detector</h3>
-  <p class="project-tech">Python | NLP | Machine Learning</p>
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="section achievements-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Recognition &amp; Competitions</span>
+          <h2 class="section-title">Achievements</h2>
+          <div class="title-underline"></div>
+        </div>
 
-  <ul class="project-points">
-    <li>Developed a machine learning application to detect fraudulent job postings using Natural Language Processing.</li>
-
-    <li>Applied text preprocessing, feature extraction, and classification techniques to distinguish genuine and scam job advertisements.</li>
-
-    <li>Improved job verification by automatically analyzing suspicious keywords and textual patterns.</li>
-
-    <li>Designed a simple and user-friendly interface for uploading job descriptions and displaying scam prediction results.</li>
-  </ul>
-
-  <a href="https://github.com/Kishor052/JobScamDetector" target="_blank">
-    View Project
-  </a>
-</div>
-
-      <div class="project-card">
-        <h3>DOCBOT AI Chatbot</h3>
-        <p class="project-tech">AI Chatbot | 2025</p>
-        <ul class="project-points">
-          <li>Engineered a document based AI chatbot for answering questions.</li>
-          <li>Users can upload documents such as PDF or DOCX files.</li>
-          <li>Integrated Google Gemini API for context aware responses.</li>
-          <li>Built frontend with React/Vite and backend with Python Flask.</li>
-        </ul>
-        <a href="https://github.com/Kishor052/DOCBOT-AI-Chatbot" target="_blank">View Project</a>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Snestron Systems Software Development Hackathon</h3>
+            <p class="achievement-org">Snestron Systems | AI-Driven Software Development</p>
+            <p class="achievement-desc">
+              Participated in the competitive Software Development Hackathon organized by Snestron Systems.
+              Demonstrated innovation, fast prototyping, teamwork, and critical problem-solving skills in building
+              AI-driven software solutions under tight timelines.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <h3>KissanVaahan Platform</h3>
-        <p class="project-tech">Internship Project</p>
-        <ul class="project-points">
-          <li>Developed an agricultural marketplace platform for farmers.</li>
-          <li>Connected farmers, vehicle owners and buyers through a unified system.</li>
-          <li>Implemented fair market based pricing for agricultural products.</li>
-          <li>Improved farm to market supply chain efficiency.</li>
-        </ul>
-        <a href="https://github.com/Kishor052/KissanVaahan-Platform" target="_blank">View Project</a>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact Info Pane -->
+          <div class="contact-info-card">
+            <h3>Let's build something great together</h3>
+            <p>
+              Whether you have a full-time engineering role, AI SaaS project opportunity,
+              or technical collaboration in mind, feel free to reach out. I reply within 24 hours!
+            </p>
+
+            <div class="contact-methods">
+              <div class="method-item">
+                <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="method-label">Direct Email</span>
+                  <div class="method-value-wrapper">
+                    <a href="mailto:gowdakishor457@gmail.com" class="method-value">gowdakishor457@gmail.com</a>
+                    <button class="copy-btn" id="copy-email-btn" title="Copy email address">
+                      <i class="far fa-copy"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-icon"><i class="fas fa-phone-alt"></i></div>
+                <div>
+                  <span class="method-label">Phone & WhatsApp</span>
+                  <a href="tel:+919742482379" class="method-value">+91-9742482379</a>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <span class="method-label">Location</span>
+                  <span class="method-value">Bengaluru, Karnataka, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links inside Contact -->
+            <div class="contact-socials">
+              <span>Connect Professional Networks:</span>
+              <div class="social-pills">
+                <a href="https://github.com/Kishor052" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/kishorj052" target="_blank" rel="noopener noreferrer"
+                  class="social-pill">
+                  <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Pane -->
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name">Your Full Name <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="far fa-user input-icon"></i>
+                  <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+                </div>
+                <span class="error-msg" id="name-error">Please enter your name</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Your Email Address <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="far fa-envelope input-icon"></i>
+                  <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+                </div>
+                <span class="error-msg" id="email-error">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <div class="input-with-icon">
+                  <i class="fas fa-heading input-icon"></i>
+                  <input type="text" id="contact-subject" name="subject"
+                    placeholder="Job Opportunity / AI SaaS Project Inquiry">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Your Message <span class="required">*</span></label>
+                <div class="input-with-icon textarea-icon">
+                  <i class="far fa-comment-alt input-icon"></i>
+                  <textarea id="contact-message" name="message" rows="5"
+                    placeholder="Hi Kishor J, I reviewed your portfolio and would like to discuss..."
+                    required></textarea>
+                </div>
+                <span class="error-msg" id="message-error">Please enter a message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- INTERNSHIP -->
-  <section id="internship" class="internship-section">
-    <h2 class="section-title">Internships</h2>
-
-    <div class="internship-grid">
-      <div class="internship-card">
-        <h3>Business Development Intern</h3>
-        <p class="internship-company">Younity</p>
-        <p class="internship-duration">May 2025 – June 2025</p>
-        <ul class="internship-points">
-          <li>Conducted market research and competitor analysis to identify partnership opportunities.</li>
-          <li>Analyzed customer feedback and lead conversion data to improve outreach strategies.</li>
-          <li>Assisted in CRM management and maintained weekly sales performance reports.</li>
-          <li>Improved business outreach strategies through data-driven insights.</li>
-           <a href="https://drive.google.com/file/d/1ifvQ0s4T8pSaBH29uG4BNEa6ZuUS5eXu/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
-      </div>       
-        </ul>
-      </div>
-
-      <div class="internship-card">
-        <h3>Frontend Development Intern</h3>
-        <p class="internship-company">Code Tech IT Solutions</p>
-        <p class="internship-duration">July 2025 – October 2025</p>
-        <ul class="internship-points">
-          <li>Designed and developed responsive web interfaces using React, HTML, and CSS.</li>
-          <li>Developed frontend projects including an E-learning platform and AI chatbot.</li>
-          <li>Built a personal portfolio website with modern UI design.</li>
-          <li>Ensured cross-browser compatibility and mobile responsiveness.</li>
-           <a href="https://drive.google.com/file/d/1frIi8tXerJ4RACLRNk92SHnWdF06R9aG/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
-      </div>
-        </ul>
-      </div>
-
-      <div class="internship-card">
-        <h3>Web Design & Development Intern</h3>
-        <p class="internship-company">Gully Sales Pvt Ltd</p>
-        <p class="internship-duration">August 2025 – December 2025</p>
-        <ul class="internship-points">
-          <li>Designed responsive UI/UX layouts and user flows using Moqups.</li>
-          <li>Developed web pages using PHP, Tailwind CSS, and Bootstrap.</li>
-          <li>Created Product Requirement Documents (PRD) and CRM documentation.</li>
-          <li>Built the KissanVaahan agricultural marketplace platform connecting farmers and buyers.</li>
-           <a href="https://drive.google.com/file/d/1F_lKx9Teud-AGRQ9MZ-iL42SvW6DrBG9/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
-      </div>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="certifications-section">
-    <h2 class="section-title">Certifications</h2>
-
-    <div class="certifications-grid">
-      <div class="cert-card">
-        <h3>Data Structures and Algorithms with Java</h3>
-        <p class="cert-provider">Infosys Springboard</p>
-        <p class="cert-duration">Certification Program</p>
-        <a href="https://drive.google.com/file/d/1qQsE0tT-ATafqozjPKhjENjcm_OAiHnH/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
-      </div>
-
-      <div class="cert-card">
-        <h3>Ethical CyberSecurity</h3>
-        <p class="cert-provider">EthicalByte</p>
-        <p class="cert-duration">Cyber Security Certification</p>
-        <a href="https://drive.google.com/file/d/13Swm_wvMcTq8-OY_-I-EECyPxUBeN-Wk/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
-      </div>
-
-      <div class="cert-card">
-        <h3>Data structures in C</h3>
-        <p class="cert-provider">Greatlearning</p>
-        <p class="cert-duration">dsa fundamentals</p>
-        <a href="https://drive.google.com/file/d/1rZeBHEE3UI0SOWuE-tCYc2XN4tqnEhEH/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
-      </div>
-
-      <div class="cert-card">
-        <h3>MongoDB for Java Developers</h3>
-        <p class="cert-provider">MongoDB University</p>
-        <p class="cert-duration">20 Hour Certification</p>
-        <a href="https://drive.google.com/file/d/11abo-FtJVRB-Uc6IWwVac1pR7GXZy-l0/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
-      </div>
-
-      <div class="cert-card">
-        <h3>Excel Beginners to Advanced</h3>
-        <p class="cert-provider">Younity</p>
-        <p class="cert-duration">30 Day Certification</p>
-        <a href="https://drive.google.com/file/d/1o2Zw7CQKZRJ3WunzKOpxVYqMoohXBDd4/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
-      </div>
-
-      <div class="cert-card">
-        <h3>Big Data Computing</h3>
-        <p class="cert-provider">NPTEL</p>
-        <p class="cert-duration">8 Week Course</p>
-        <a href="https://drive.google.com/file/d/1CrBko4MPfn9fiJZCJoBwJCtrnfwBwV01/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact-section">
-    <h2>Contact Me</h2>
-
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea rows="5" placeholder="Message"></textarea>
-      <button class="btn primary" type="submit">Send Message</button>
-    </form>
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <h3>Kishor</h3>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Kishor J<span class="logo-dot">.DEV</span></a>
+        <p class="footer-tagline">AI &amp; Python Full Stack Developer | Enterprise SaaS &amp; AI Systems</p>
+      </div>
 
-    <div class="social-icons">
-      <a href="https://github.com/Kishor052" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#internship">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-      <a href="https://www.linkedin.com/in/kishorj052" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
+      <div class="footer-socials">
+        <a href="https://github.com/Kishor052" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+            class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/kishorj052" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:gowdakishor457@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
 
-    <p>© 2025 Kishor</p>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="current-year">2026</span> Kishor J. All rights reserved.</p>
+        <p class="crafted-text">Built with <i class="fas fa-heart heart-icon"></i> &amp; FastAPI / React Architecture
+        </p>
+      </div>
+    </div>
   </footer>
 
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script>
-    ScrollReveal().reveal('.hero-left', { origin: 'left', distance: '50px', duration: 1000 });
-    ScrollReveal().reveal('.hero-right', { origin: 'right', distance: '50px', duration: 1000 });
-    ScrollReveal().reveal('.skill-card', { interval: 200 });
-    ScrollReveal().reveal('.project-card', { interval: 200 });
-    ScrollReveal().reveal('.internship-card', { interval: 200 });
-    ScrollReveal().reveal('.cert-card', { interval: 200 });
-  </script>
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button id="back-to-top" class="back-to-top" aria-label="Scroll to top" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="script.js"></script>
 </body>
+
 </html>

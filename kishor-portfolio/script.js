@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
           message: messageInput.value.trim()
         };
 
-        fetch('https://formsubmit.co/ajax/gowdakishor457@gmail.com', {
+        fetch('https://formsubmit.co/ajax/6eb29659d0eb4da66e1ad8d18dd665e', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
